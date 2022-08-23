@@ -1,20 +1,20 @@
-const startBtnRef = document.querySelector('[data-start]');
-const stopBtnRef = document.querySelector('[data-stop]');
+const startBtn = document.querySelector('[data-start]');
+const stopBtn = document.querySelector('[data-stop]');
 let colorIntervalId = null;
 
-startBtnRef.addEventListener('click', onStartBtnClick);
-stopBtnRef.addEventListener('click', onStopBtnClick);
+startBtn.addEventListener('click', onStartBtnClick);
+stopBtn.addEventListener('click', onStopBtnClick);
 
 function onStartBtnClick(e) {
   colorIntervalId = setInterval(changeBgColor, 1000);
   e.target.disabled = true;
-  stopBtnRef.disabled = false;
+  stopBtn.disabled = false;
 }
 
 function onStopBtnClick(e) {
   clearInterval(colorIntervalId);
   e.target.disabled = true;
-  startBtnRef.disabled = false;
+  startBtn.disabled = false;
 }
 
 function changeBgColor() {
