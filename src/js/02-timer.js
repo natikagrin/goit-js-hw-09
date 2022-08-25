@@ -3,7 +3,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const refs = {
-  datetimePicker: document.querySelector('#datetime-picker'),
+  dateTimePicker: document.querySelector('#datetime-picker'),
   startTimerBtn: document.querySelector('[data-start]'),
   timerDays: document.querySelector('[data-days]'),
   timerHours: document.querySelector('[data-hours]'),
@@ -32,7 +32,7 @@ const flatpickrOptions = {
   },
 };
 
-flatpickr(refs.datetimePicker, flatpickrOptions);
+flatpickr(refs.dateTimePicker, flatpickrOptions);
 
 function onTimerStart(e) {
   timerIntervalId = setInterval(countdownChange, 1000);
