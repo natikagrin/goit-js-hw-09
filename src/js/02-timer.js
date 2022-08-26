@@ -12,7 +12,7 @@ const refs = {
 };
 
 let timerIntervalId = null;
-let selectedDate = null;
+let selectedDate = true;
 
 refs.startTimerBtn.disabled = true;
 refs.startTimerBtn.addEventListener('click', onTimerStart);
